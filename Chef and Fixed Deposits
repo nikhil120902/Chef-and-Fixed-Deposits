@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+ 
+// #define int long long
+#define vi vector<int>
+#define pii pair<int,int>
+#define vii vector<pii>
+#define  rep(i,a,b) for(int i=a;i<b;i++)
+#define ff first
+#define ss second
+//#define mh priority_queue<int,int>    //max heap
+#define setBits(x) builtin_popcount(x)
+
+signed main(){
+int t; cin>>t;
+while(t--){
+    int n,m,a=0,b=0,c=0; cin>>n>>m;
+    c=n;
+priority_queue<int,vi>pq;
+while(n--){
+    int x; cin>>x;
+    pq.push(x);
+}
+while(m>a&&b<c){
+  
+    a+=pq.top();
+    b++;
+    pq.pop();
+  
+}
+    if(b==c){
+        b=-1;
+    }
+   
+cout<<b<<endl;
+    
+}
+
+
+    return 0;
+}
